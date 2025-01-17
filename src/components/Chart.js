@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
-import { Chart as ChartJS } from 'chart.js/auto'; // Chart.js v3 이상에서 필요한 auto import
+import { Chart as ChartJS } from 'chart.js/auto';
 
 function ChartComponent({ symbol }) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    // 실제로는 해당 심볼의 과거 데이터를 API로부터 받아와야 한다.
-    // 여기서는 단순히 mock 데이터로 시뮬레이션
+    // 단순히 mock 데이터로 시뮬레이션, API 미적용
     const mockData = [];
     for (let i = 0; i < 30; i++) {
       mockData.push({
